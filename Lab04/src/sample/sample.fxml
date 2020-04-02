@@ -1,0 +1,30 @@
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<BorderPane fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <Button fx:id="initializeListButton" mnemonicParsing="false" onAction="#initialize" text="Load file path " BorderPane.alignment="TOP_LEFT">
+            <graphic>
+                <TextField fx:id="catalougeFieldTextArea" prefHeight="25.0" prefWidth="423.0" text="processing" />
+            </graphic>
+        </Button>
+    </top>
+    <left>
+        <ListView fx:id="classListView" onMouseClicked="#handleClickListView">
+
+        </ListView>
+    </left>
+    <center>
+        <TextArea fx:id="enterTextArea" text="Wprowadz tu tekst do przetworzenia." prefWidth="340.0"/>
+    </center>
+    <right>
+        <TextArea fx:id="processedTextArea" prefWidth="340.0"/>
+    </right>
+    <bottom>
+        <Label fx:id="statusListenerLabel" BorderPane.alignment="CENTER" />
+    </bottom>
+</BorderPane>
